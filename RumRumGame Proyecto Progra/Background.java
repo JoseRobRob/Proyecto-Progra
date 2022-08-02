@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Background extends World
 {
     counter cont = new counter();
+    GreenfootSound myMusic = new GreenfootSound("fondo1.mp3"); 
 
     /**
      * Constructor for objects of class Background.
@@ -29,13 +30,17 @@ public class Background extends World
     }
         
         
-        
+    public void act(){
+        myMusic.play();
+    }
     
     
 
     private void prepare()
     {
         addObject(cont, 80, 20);
+        
+        
 
         murodiag murodiag = new murodiag();
         addObject(murodiag,234,313);
